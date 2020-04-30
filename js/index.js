@@ -1,7 +1,7 @@
 document.addEventListener("readystatechange", function (e) {
    if (e.target.readyState === 'complete') {
-       onLoadComplete();
-//       test();
+//       onLoadComplete();
+       test();
    } else {
        
    }
