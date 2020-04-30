@@ -1,7 +1,7 @@
 document.addEventListener("readystatechange", function (e) {
    if (e.target.readyState === 'complete') {
-//       onLoadComplete();
-       test();
+       onLoadComplete();
+//       test();
    } else {
        
    }
@@ -23,32 +23,46 @@ function onLoadComplete() {
 }
 
 function buildLists(json) {
-    var html = "";
+    
+    var ulView = document.getElementById("ul-list");
+    
     for (var i = 0; i < json.length; i++) {
         var list = json[i];
-        var itemHeader = "<p class=\"p-header\">" + list.name + "</p>";
-        var items = buildItems(list);
-        var inner = itemHeader + items;
-        html += inner;
+        var itemHeader = document.createElement("p");
+        itemHeader.setAttribute("class", "p-header");
+        itemHeader.innerText = list.name;
+        ulView.appendChild(itemHeader);
+
+        for (var j = 0; j < list.items.length; j++) {
+            var item = list.items[j];
+            var innerView = createInnerCellView(item);
+            ulView.appendChild(innerView);
+        }
     }
-    var ulView = document.getElementById("ul-list");
-    ulView.innerHTML = html;
+    
+    //bind event
     ulView.addEventListener("click", function(item){
         console.log(item);
     });
 }
 
+function createInnerCellView(item) {
+    var innerView = document.createElement("li");
+    innerView.setAttribute("class", "li-items");
 
-function buildItems(list) {
-    var html = "";
-    for (var i = 0; i < list.items.length; i++) {
-        var item = list.items[i];
-        var inner = "<li class=\"li-items\">" + item.name + "</li>";
-        html += inner;
-    }
-    return html;
+    var imageView = document.createElement("img");
+    imageView.setAttribute("class", "cell-img");
+    imageView.setAttribute("display", "inline-block");
+    imageView.setAttribute("src", item.img);
+    innerView.appendChild(imageView);
+    /*
+    var infoDiv = document.createElement("p");
+    infoDiv.setAttribute("class", "cell-info");
+    infoDiv.innerText = item.name;
+    innerView.appendChild(infoDiv);
+    */
+    return innerView;
 }
-
 
 function test() {
     var json = [

@@ -6,18 +6,19 @@
     white-space:pre-wrap;
 }
 
-.li-items{
-    width:100%;
-    height:50px;
-    list-style:none;
-    font-size:16px;
-    font-family:"PingfangSC-Regular";
-}
-
 .p-full{
     width:100%;
     font-family:"PingFangSC-Regular";
     font-size:22px;
+}
+
+.li-items{
+    width:100%;
+    height:100px;
+    list-style:none;
+    font-size:16px;
+    font-family:"PingfangSC-Regular";
+    background:lightgreen;
 }
 
 .p-header{
@@ -25,4 +26,16 @@
     font-family:"PingFangSC-Regular";
     font-size:20px;
     color:cyan;
+}
+
+.cell-img{
+    margin-top:10px;
+    margin-left:10px;
+    height:80px;
+    width:80px;
+    background:lightgray;
+}
+
+.cell-div{
+
 }
