@@ -1,6 +1,7 @@
 document.addEventListener("readystatechange", function (e) {
    if (e.target.readyState === 'complete') {
        onLoadComplete();
+//       test();
    }
 })
 
@@ -20,12 +21,11 @@ function onLoadComplete() {
 }
 
 function buildLists() {
-    var json = buffer;
     
     var ulView = document.getElementById("ul-list");
     
-    for (var i = 0; i < json.length; i++) {
-        var list = json[i];
+    for (var i = 0; i < buffer.length; i++) {
+        var list = buffer[i];
         var itemHeader = document.createElement("p");
         itemHeader.setAttribute("class", "p-header");
         itemHeader.innerText = list.name;
@@ -80,6 +80,25 @@ function createInnerCellView(item, idx) {
     infoPrice.innerText = item.price / 100 + "元";
     infoDiv.appendChild(infoPrice);
 
-    console.log(innerView);
+//    console.log(innerView);
     return innerView;
+}
+
+function test() {
+    buffer = [
+        {
+            "id" : 1001,
+            "name" : "曲奇系列",
+            "items" : [
+                {
+                    "id" : 10011,
+                    "name" : "双重Coco坚果",
+                    "unit" : "一盒(6块)",
+                    "price" : 5800,
+                    "img" : "img/quqi/IMG_1182.JPG",
+                }
+            ]
+        }
+    ]
+    buildLists();
 }
