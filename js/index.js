@@ -1,7 +1,7 @@
 document.addEventListener("readystatechange", function (e) {
    if (e.target.readyState === 'complete') {
-//       onLoadComplete();
-       test();
+       onLoadComplete();
+//       test();
    }
 })
 
@@ -12,15 +12,15 @@ function onLoadComplete() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() {
         if (xmlhttp.status == 200) {
-            buffer = JSON.parse(xmlhttp.responseText);
-            buildLists();
+            buildLists(JSON.parse(xmlhttp.responseText));
         }
     }
     xmlhttp.open("GET", url, true);
     xmlhttp.send(null);
 }
 
-function buildLists() {
+function buildLists(json) {
+    buffer = json;
     
     var ulView = document.getElementById("ul-list");
     
@@ -67,7 +67,7 @@ function createInnerCellView(item, idx) {
     
     var infoTitle = document.createElement("p");
     infoTitle.innerText = item.name;
-    infoTitle.setAttribute("class", "cell-p");
+    infoTitle.setAttribute("class", "cell-p-name");
     infoDiv.appendChild(infoTitle);
 
     var infoUnit = document.createElement("p");
@@ -85,7 +85,7 @@ function createInnerCellView(item, idx) {
 }
 
 function test() {
-    buffer = [
+    var json = [
         {
             "id" : 1001,
             "name" : "曲奇系列",
@@ -190,5 +190,5 @@ function test() {
         }
     ]
 
-    buildLists();
+    buildLists(json);
 }

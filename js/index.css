@@ -44,6 +44,12 @@
 /*    background:lightpink;*/
 }
 
+.cell-p-name{
+    font-size:13px;
+    line-height:20px;
+    margin-top:0px;
+}
+
 .cell-p{
     font-size:12px;
     line-height:20px;
@@ -51,7 +57,7 @@
 }
 
 .cell-p-price{
-    font-size:12px;
+    font-size:15px;
     line-height:20px;
     margin-top:0px;
     color:red;
