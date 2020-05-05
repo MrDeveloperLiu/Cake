@@ -3,6 +3,12 @@
    padding: 0;
 }
 
+.img-icon{
+    background:lightgray;
+    width:100%
+    height:300px;
+}
+
 .p-title{
     font-family:"PingFangSC-Regular";
     font-size:18px;
