@@ -16,6 +16,8 @@ function onLoadComplete() {
 
     //image
     var imageView = document.getElementById("icon");
+    imageView.height = 300;
+    
     ut_loadImageFitScreen(json.img, 0, function(image, w, h){
         imageView.src = json.img;
         imageView.width = w;
