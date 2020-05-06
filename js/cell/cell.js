@@ -188,3 +188,13 @@ function buildProductBirthdayCakeLists(ulView, buffer, callback) {
     }
 }
 
+
+function bindULEventListener(ulView, callback) {
+    ulView.addEventListener('click', function(e) {                
+        var target = e.target;
+        if(target.nodeName === 'LI') {
+            let item = e.target;
+            console.log(item);
+        }
+    });
+}
