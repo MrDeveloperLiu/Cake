@@ -1,9 +1,3 @@
-document.addEventListener("readystatechange", function (e) {
-   if (e.target.readyState === 'complete') {
-       onLoadComplete();
-   }
-})
-
 //main
 function onLoadComplete() {    
     //act
@@ -22,3 +16,4 @@ function loadImageView(imageView, item) {
     });
 }
 
+onLoadComplete();

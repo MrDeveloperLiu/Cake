@@ -1,8 +1,3 @@
-document.addEventListener("readystatechange", function (e) {
-   if (e.target.readyState === 'complete') {
-       onLoadComplete();
-   }
-})
 //main
 function onLoadComplete() {
     //act
@@ -30,3 +25,5 @@ function turnToDetail(it) {
 function turnToProfile(it) {
     window.location.href = it;
 }
+
+onLoadComplete();

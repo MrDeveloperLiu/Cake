@@ -1,9 +1,3 @@
-document.addEventListener("readystatechange", function (e) {
-   if (e.target.readyState === 'complete') {
-       onLoadComplete();
-   }
-})
-
 //main
 function onLoadComplete() {
     
@@ -31,3 +25,4 @@ function onLoadComplete() {
     priceView.innerText = ut_formatPrice(json.price);    
 }
 
+onLoadComplete();

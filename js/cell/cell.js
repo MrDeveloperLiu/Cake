@@ -131,8 +131,19 @@ function createInnerLinkListView(item, itemId, callback) {
     var innerView = document.createElement("li");
     innerView.setAttribute("data-id", itemId);
     innerView.setAttribute("onclick", "onclickTheLinkListView(this)");
-    innerView.innerText = item.name;
+    innerView.setAttribute("class", "li-info");
     innerView.callback = callback;
+    
+    var infoTitle = document.createElement("p");
+    infoTitle.innerText = item.name;
+    infoTitle.setAttribute("class", "p-li-info");
+    innerView.appendChild(infoTitle);
+    
+    var infoView = document.createElement("p");
+    infoView.setAttribute("class", "p-li-arrow");
+    infoView.innerText = ">>";
+    innerView.appendChild(infoView);
+    
     return innerView;
 }
 
@@ -190,7 +201,7 @@ function buildProductBirthdayCakeLists(ulView, buffer, callback) {
 
 
 function bindULEventListener(ulView, callback) {
-    ulView.addEventListener('click', function(e) {                
+    ulView.addEventListener('click', function(e) {
         var target = e.target;
         if(target.nodeName === 'LI') {
             let item = e.target;

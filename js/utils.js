@@ -32,3 +32,11 @@ function ut_price(p) {
 function ut_formatPrice(p){
     return ut_price(p) + "元";
 }
+
+function ut_listenDomComplete(callback) {
+    document.addEventListener("readystatechange", function (e) {
+       if (e.target.readyState === 'complete') {
+           callback();
+       }
+    });
+}
