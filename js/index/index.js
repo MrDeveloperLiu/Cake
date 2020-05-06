@@ -10,11 +10,15 @@ function onLoadComplete() {
     var ulView = document.getElementById("ul-list");
     buildProductLists(ulView, BDMenuList, turnToDetail);
     //link
-    var linkView = document.getElementById("ul-list");
+    var linkView = document.getElementById("ul-info");
     buildProductLinkLists(linkView, BDProductLinkList, turnToProfile);
     //qr
     var qrView = document.getElementById("img-qrcode");
     qrView.src="img/qrcode/IMG_1222.JPG";
+    
+    
+    let ul = document.querySelector('ul-list');
+    console.log(ul);
 }
 
 function turnToDetail(it) {
