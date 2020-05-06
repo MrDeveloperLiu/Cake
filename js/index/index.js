@@ -15,10 +15,6 @@ function onLoadComplete() {
     //qr
     var qrView = document.getElementById("img-qrcode");
     qrView.src="img/qrcode/IMG_1222.JPG";
-    
-    
-    let ul = document.querySelector('ul-list');
-    console.log(ul);
 }
 
 function turnToDetail(it) {
