@@ -42,3 +42,14 @@ var BDNewProductList = {
                 10033
                ]
 };
+
+var BDProductLinkList = [
+    {
+        "name" : "产品说明",
+        "url" : "product-info.html",
+    },
+    {
+        "name" : "成品展示",
+        "url" : "product-list.html",
+    },
+]

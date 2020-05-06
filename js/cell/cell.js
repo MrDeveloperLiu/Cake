@@ -126,3 +126,65 @@ function buildNewProductLists(ulView, buffer, callback) {
 }
 
 
+//links
+function createInnerLinkListView(item, itemId, callback) {
+    var innerView = document.createElement("li");
+    innerView.setAttribute("data-id", itemId);
+    innerView.setAttribute("onclick", "onclickTheLinkListView(this)");
+    innerView.innerText = item.name;
+    innerView.callback = callback;
+    return innerView;
+}
+
+function onclickTheLinkListView(v){
+    var itemURL = v.getAttribute("data-id");
+    v.callback(itemURL);
+    console.log(itemURL);
+}
+
+function buildProductLinkLists(ulView, buffer, callback) {
+    var count = buffer.length;
+    if (count <= 0) {
+        return;
+    }
+
+    var itemHeader = document.createElement("p");
+    itemHeader.setAttribute("class", "p-header");
+    itemHeader.innerText = "产品详情";
+    ulView.appendChild(itemHeader);
+
+    for (var i = 0; i < count; i++) {
+        var item = buffer[i];
+        var itemId = item.url;
+        var innerView = createInnerLinkListView(item, itemId, callback);
+        ulView.appendChild(innerView);
+    }
+}
+
+//links
+function createInnerBirthdayListView(item, callback) {
+    var innerView = document.createElement("li");
+    innerView.setAttribute("class", "li-cake");
+    
+    var imageView = document.createElement("img");
+    imageView.setAttribute("class", "img-cake");
+    innerView.appendChild(imageView);
+    
+    callback(imageView, item);
+
+    return innerView;
+}
+
+function buildProductBirthdayCakeLists(ulView, buffer, callback) {
+    var count = buffer.length;
+    if (count <= 0) {
+        return;
+    }
+
+    for (var i = 0; i < count; i++) {
+        var item = buffer[i];
+        var innerView = createInnerBirthdayListView(item, callback);
+        ulView.appendChild(innerView);
+    }
+}
+

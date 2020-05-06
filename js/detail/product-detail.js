@@ -28,9 +28,6 @@ function onLoadComplete() {
     titleView.innerText = json.name;
     
     var priceView = document.getElementById("price");
-    priceView.innerText = ut_formatPrice(json.price);
-    
-    console.log("BDMaterialDict", BDMaterialDict);
-    console.log("BDProductInfoDict", BDProductInfoDict);
+    priceView.innerText = ut_formatPrice(json.price);    
 }
 

@@ -1,0 +1,13 @@
+.ul-cake{
+    margin:0;
+    padding:0;
+}
+
+.li-cake{
+    list-style:none;
+}
+
+.img-cake{
+    width:100%;
+    background:lightgray;
+}

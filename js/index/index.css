@@ -4,3 +4,11 @@
     font-size:22px;
 }
 
+.img-qrcode{
+    width:86px;
+    height:86px;
+}
+
+.div-qrcode{
+    text-align:center;
+}
