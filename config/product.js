@@ -51,7 +51,15 @@ var BDProductInfoDict = {
         "price" : 4500,
         "img" : "img/cake/IMG_1198.JPG",
     },
-
+    10033 : {
+        "id" : 10032,
+        "name" : "康乃馨蛋糕",
+        "unit" : "一个(6寸)",
+        "price" : 17800,
+        "img" : "img/cake/IMG_1221.JPG",
+        
+    },
+    
     10041 : {
         "id" : 10041,
         "name" : "草莓小单纯拉丝",
