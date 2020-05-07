@@ -91,7 +91,7 @@ function buildActivityLists(ulView, buffer) {
     if (actCnt <= 0) {
         return;
     }
-
+    
     var itemHeader = document.createElement("p");
     itemHeader.setAttribute("class", "p-header");
     itemHeader.innerText = buffer.name;

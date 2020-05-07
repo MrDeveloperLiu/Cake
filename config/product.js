@@ -53,7 +53,7 @@ var BDProductInfoDict = {
     },
     10033 : {
         "id" : 10032,
-        "name" : "康乃馨蛋糕",
+        "name" : "康乃馨蛋糕（母亲节限定）",
         "unit" : "一个(6寸)",
         "price" : 17800,
         "img" : "img/cake/IMG_1221.JPG",
@@ -88,6 +88,20 @@ var BDProductInfoDict = {
         "price" : 4000,
         "img" : "img/box_cake/IMG_1187.JPG",
     },
+    10045 : {
+        "id" : 10045,
+        "name" : "雪绒冰酪戚风",
+        "unit" : "一个(4寸)",
+        "price" : 2800,
+        "img" : "img/new/IMG_1244.JPG",
+    },
 
+    10051 : {
+        "id" : 10051,
+        "name" : "冰激凌雪媚娘",
+        "unit" : "一盒(4个)",
+        "price" : 4800,
+        "img" : "img/new/IMG_1243.JPG",
+    },
 
 };

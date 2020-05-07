@@ -39,7 +39,9 @@ var BDMenuList = [
 var BDNewProductList = {
     "name" : "新品上架",
     "items" : [
-                10033
+                10033,
+                10045,
+                10051
                ]
 };
 
@@ -50,6 +52,10 @@ var BDProductLinkList = [
     },
     {
         "name" : "成品展示",
-        "url" : "product-list.html",
+        "url" : "product-list.html?type=0",
+    },
+    {
+        "name" : "客户反馈",
+        "url" : "product-list.html?type=1",
     },
 ]
