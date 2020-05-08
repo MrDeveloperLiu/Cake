@@ -33,8 +33,8 @@ var BDProductInfoDict = {
         "unit" : "一盒(6块)",
         "price" : 5000,
         "discount" : 100,
-        "img" : "img/src/IMG_1189.JPG",
-        "thumb" : "img/thumb/IMG_1189.JPG",
+        "img" : "img/src/IMG_1196.JPG",
+        "thumb" : "img/thumb/IMG_1196.JPG",
     },
     
     10021 : {
