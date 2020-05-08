@@ -3,14 +3,32 @@ function imageLazyLoader(cls) {
     function _start() {
         console.log("lazy-image-load");
         window.addEventListener("scroll", _windowOnScroll);
+        window.addEventListener("pageshow", _forcePageReload);
         _windowOnScroll();
     }
     
     function _stop() {
         console.log("lazy-image-unload");
         window.removeEventListener("scroll", _windowOnScroll);
+        window.removeEventListener("pageshow", _forcePageReload);
     }
 
+    function _forcePageReload(event) {
+        if (event.persisted) {
+            _resetToUnload();
+            _windowOnScroll();
+            console.log("webpage is loading from a cache");
+        }
+    }
+
+    function _resetToUnload() {
+        var lazyImgElements = document.getElementsByClassName(lazyLoad_cls);
+        for (var i = 0; i < lazyImgElements.length; i++){
+            var img = lazyImgElements[i];
+            img.setAttribute("data-loaded", "0");
+        }
+    }
+    
     function _windowOnScroll() {
         if (lazyLoad_timer) {
             clearTimeout(lazyLoad_timer);
@@ -49,7 +67,7 @@ function imageLazyLoader(cls) {
             img.setAttribute("data-loaded", "3");
         }
         img.src = src;
-        console.log("loading", img);
+//        console.log("loading", img);
     }
 
     function _imageIsOnScreen(img) {
