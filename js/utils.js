@@ -36,11 +36,17 @@ function ut_loadImageFitScreen(src, edge, callback) {
 }
 
 function ut_price(p) {
-    return p / 100.0;
+    return p / 100;
 }
 
 function ut_formatPrice(p){
     return ut_price(p) + "元";
+}
+
+function ut_formatPriceWithDiscount(p, d){
+    var price = (p * d) / 10000;
+    var priceInt = Math.floor(price);
+    return priceInt + "元";
 }
 
 function ut_listenDomComplete(callback) {

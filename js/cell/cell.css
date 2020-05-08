@@ -8,7 +8,6 @@
 
 .cls-lazy-img{
     margin-top:10px;
-    margin-left:10px;
     height:80px;
     width:80px;
     background:lightgray;
@@ -22,21 +21,35 @@
 
 .cell-p-name{
     font-size:13px;
-    line-height:20px;
+    line-height:10px;
     margin-top:0px;
+/*    background:lightcyan;*/
 }
 
 .cell-p{
     font-size:12px;
-    line-height:20px;
+    line-height:10px;
     margin-top:0px;
+/*    background:lightcyan;*/
 }
 
 .cell-p-price{
     font-size:15px;
-    line-height:20px;
     margin-top:0px;
     color:red;
+    display:inline;
+    margin-right:10px;
+/*    background:lightcyan;*/
+}
+
+.cell-p-discount{
+    font-size:15px;
+    margin-top:0px;
+    color:lightgray;
+    display:inline;
+    text-decoration:line-through;
+    margin-right:10px;
+/*    background:lightcyan;*/
 }
 
 .li-activity{

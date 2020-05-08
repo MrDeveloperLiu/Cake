@@ -27,10 +27,28 @@ function createInnerProrductsListView(item, itemId, callback) {
     infoDiv.appendChild(infoUnit);
 
     var infoPrice = document.createElement("p");
-    infoPrice.setAttribute("class", "cell-p-price");
+
+    if (item.discount >= 100) {
+        infoPrice.setAttribute("class", "cell-p-price");
+    }else{
+        infoPrice.setAttribute("class", "cell-p-discount");
+
+        var infoDiscount = document.createElement("p");
+        infoDiscount.setAttribute("class", "cell-p-price");
+        infoDiscount.innerText = ut_formatPriceWithDiscount(item.price, item.discount);
+        infoDiv.appendChild(infoDiscount);
+    }
+
     infoPrice.innerText = ut_formatPrice(item.price);
     infoDiv.appendChild(infoPrice);
-
+    
+    if (item.hasOwnProperty("tag")) {
+        var infoTag = document.createElement("p");
+        infoTag.setAttribute("class", "cell-p-price");
+        infoTag.innerText = item.tag;
+        infoDiv.appendChild(infoTag);
+    }
+    
     return innerView;
 }
 
