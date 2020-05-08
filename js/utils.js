@@ -6,6 +6,16 @@ function ut_loadImage(src, callback) {
     image.src = src;
 }
 
+function ut_imageFitSizeAccordingNatural(image, edge) {
+    var ratio = (image.naturalHeight) / (image.naturalWidth);
+    var width = screen.width - (edge * 2);
+    var height = ratio * width;
+    return {
+        width : width,
+        height : height
+    };
+}
+
 function ut_imageFitSizeAccordingScreen(image, edge) {
     var ratio = (image.height) / (image.width);
     var width = screen.width - (edge * 2);

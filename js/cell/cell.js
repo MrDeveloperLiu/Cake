@@ -8,8 +8,8 @@ function createInnerProrductsListView(item, itemId, callback) {
     innerView.callback = callback;
     
     var imageView = document.createElement("img");
-    imageView.setAttribute("class", "cell-img");
-    imageView.setAttribute("src", item.img);
+    imageView.setAttribute("class", "cls-lazy-img");
+    imageView.setAttribute("data-src", item.img);
     innerView.appendChild(imageView);
     
     var infoDiv = document.createElement("div");
@@ -42,20 +42,25 @@ function onclickTheListView(v) {
 }
 
 function buildProductLists(ulView, buffer, callback) {
+
+    var fragment = document.createDocumentFragment();
+    
     for (var i = 0; i < buffer.length; i++) {
         var list = buffer[i];
         var itemHeader = document.createElement("p");
         itemHeader.setAttribute("class", "p-header");
         itemHeader.innerText = list.name;
-        ulView.appendChild(itemHeader);
+        fragment.appendChild(itemHeader);
 
         for (var j = 0; j < list.items.length; j++) {
             var itemId = list.items[j];
             var item = BDProductInfoDict[itemId];
             var innerView = createInnerProrductsListView(item, itemId, callback);
-            ulView.appendChild(innerView);
+            fragment.appendChild(innerView);
         }
     }
+    
+    ulView.appendChild(fragment);
 }
 
 // activity
@@ -91,17 +96,20 @@ function buildActivityLists(ulView, buffer) {
     if (actCnt <= 0) {
         return;
     }
+    var fragment = document.createDocumentFragment();
     
     var itemHeader = document.createElement("p");
     itemHeader.setAttribute("class", "p-header");
     itemHeader.innerText = buffer.name;
-    ulView.appendChild(itemHeader);
+    fragment.appendChild(itemHeader);
 
     for (var i = 0; i < actCnt; i++) {
         var item = buffer.items[i];
         var innerView = createInnerActivityListView(item, i);
-        ulView.appendChild(innerView);
+        fragment.appendChild(innerView);
     }
+    
+    ulView.appendChild(fragment);
 }
 
 //new products
@@ -111,18 +119,21 @@ function buildNewProductLists(ulView, buffer, callback) {
     if (actCnt <= 0) {
         return;
     }
-
+    var fragment = document.createDocumentFragment();
+    
     var itemHeader = document.createElement("p");
     itemHeader.setAttribute("class", "p-header");
     itemHeader.innerText = buffer.name;
-    ulView.appendChild(itemHeader);
+    fragment.appendChild(itemHeader);
 
     for (var i = 0; i < actCnt; i++) {
         var itemId = buffer.items[i];
         var item = BDProductInfoDict[itemId];
         var innerView = createInnerProrductsListView(item, itemId, callback);
-        ulView.appendChild(innerView);
+        fragment.appendChild(innerView);
     }
+    
+    ulView.appendChild(fragment);
 }
 
 
@@ -141,7 +152,7 @@ function createInnerLinkListView(item, itemId, callback) {
     
     var infoView = document.createElement("p");
     infoView.setAttribute("class", "p-li-arrow");
-    infoView.innerText = ">>";
+    infoView.innerText = ">";
     innerView.appendChild(infoView);
     
     return innerView;
@@ -158,45 +169,51 @@ function buildProductLinkLists(ulView, buffer, callback) {
     if (count <= 0) {
         return;
     }
+    var fragment = document.createDocumentFragment();
 
     var itemHeader = document.createElement("p");
     itemHeader.setAttribute("class", "p-header");
     itemHeader.innerText = "产品详情";
-    ulView.appendChild(itemHeader);
+    fragment.appendChild(itemHeader);
 
     for (var i = 0; i < count; i++) {
         var item = buffer[i];
         var itemId = item.url;
         var innerView = createInnerLinkListView(item, itemId, callback);
-        ulView.appendChild(innerView);
+        fragment.appendChild(innerView);
     }
+    
+    ulView.appendChild(fragment);
 }
 
 //links
-function createInnerBirthdayListView(item, callback) {
+function createInnerBirthdayListView(item) {
     var innerView = document.createElement("li");
     innerView.setAttribute("class", "li-cake");
     
     var imageView = document.createElement("img");
-    imageView.setAttribute("class", "img-cake");
+    imageView.setAttribute("class", "cls-lazy-img");
+    imageView.setAttribute("data-fit", "natural");
+    imageView.setAttribute("data-src", item.img);
     innerView.appendChild(imageView);
     
-    callback(imageView, item);
-
     return innerView;
 }
 
-function buildProductBirthdayCakeLists(ulView, buffer, callback) {
+function buildProductBirthdayCakeLists(ulView, buffer) {
     var count = buffer.length;
     if (count <= 0) {
         return;
     }
-
+    var fragment = document.createDocumentFragment();
+    
     for (var i = 0; i < count; i++) {
         var item = buffer[i];
-        var innerView = createInnerBirthdayListView(item, callback);
-        ulView.appendChild(innerView);
+        var innerView = createInnerBirthdayListView(item);
+        fragment.appendChild(innerView);
     }
+    
+    ulView.appendChild(fragment);
 }
 
 

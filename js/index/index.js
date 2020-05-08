@@ -1,5 +1,7 @@
 //main
 function onLoadComplete() {
+    var lazyLoad = new imageLazyLoader("cls-lazy-img");
+    lazyLoad.start();
     //act
     var actView = document.getElementById("ul-act");
     buildActivityLists(actView, BDActList);
@@ -15,6 +17,7 @@ function onLoadComplete() {
     //qr
     var qrView = document.getElementById("img-qrcode");
     qrView.src="img/qrcode/IMG_1222.JPG";
+    
 }
 
 function turnToDetail(it) {

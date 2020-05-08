@@ -19,7 +19,7 @@
     .li-cake{
         list-style:none;
     }
-    .img-cake{
+    .cls-lazy-img{
         width:100%;
         background:lightgray;
     }
@@ -27,10 +27,14 @@
 <script src="config/birday.js"></script>
 <script src="js/parse.js"></script>
 <script src="js/utils.js"></script>
+<script src="js/lazy_img.js"></script>
 <script src="js/cell/cell.js"></script>
 <script>
     //main
     function onLoadComplete() {
+        var lazyLoad = new imageLazyLoader("cls-lazy-img");
+        lazyLoad.start();
+
         var data = BDURLParser.parse(self.location.search);
         //title
         var head = document.getElementsByTagName("head")[0];
@@ -41,21 +45,11 @@
 
         if (data.type == "1") {
             title.innerText = "客户留言";
-            buildProductBirthdayCakeLists(listView, BDCakeCommentList, loadImageView);
+            buildProductBirthdayCakeLists(listView, BDCakeCommentList);
         }else{
             title.innerText = "生日蛋糕";
-            buildProductBirthdayCakeLists(listView, BDBirthdayCakeList, loadImageView);
+            buildProductBirthdayCakeLists(listView, BDBirthdayCakeList);
         }
-    }
-
-    function loadImageView(imageView, item) {
-        imageView.height = 300;
-        
-        ut_loadImageFitScreen(item.img, 0, function(image, w, h){
-            imageView.src = item.img;
-            imageView.width = w;
-            imageView.height = h;
-        });
     }
 
     onLoadComplete();
