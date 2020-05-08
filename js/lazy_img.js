@@ -42,6 +42,12 @@ function imageLazyLoader(cls) {
                 img.height = size.height;
             }
         };
+        img.onerror = function() {
+            img.setAttribute("data-loaded", "2");
+        };
+        img.onabort = function() {
+            img.setAttribute("data-loaded", "3");
+        }
         img.src = src;
         console.log("loading", img);
     }
