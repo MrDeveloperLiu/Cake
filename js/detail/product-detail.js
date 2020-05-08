@@ -20,9 +20,9 @@ function onLoadComplete() {
     //title
     var titleView = document.getElementById("title");
     titleView.innerText = json.name;
-    
+    //price
     var priceView = document.getElementById("price");
-    priceView.innerText = ut_formatPrice(json.price);    
+    priceView.innerText = ut_formatPriceWithDiscount(json.price, json.discount);
 }
 
 onLoadComplete();
