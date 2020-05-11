@@ -40,10 +40,10 @@ var BDProductInfoDict = {
         "id" : 10015,
         "name" : "核桃曲奇",
         "unit" : "一盒(6块)",
-        "price" : 5000,
+        "price" : 5800,
         "discount" : 100,
-        "img" : "img/src/IMG_100_10015.jpg",
-        "thumb" : "img/thumb/IMG_100_10015.jpg",
+        "img" : "img/src/IMG_100_10015.JPG",
+        "thumb" : "img/thumb/IMG_100_10015.JPG",
     },
     
     10021 : {
