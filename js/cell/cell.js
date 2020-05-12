@@ -98,13 +98,6 @@ function createInnerActivityListView(item, idx) {
     infoView.innerText = item.info;
     innerView.appendChild(infoView);
 
-    if (item.link) {
-        var infoBtn = document.createElement("p");
-        infoBtn.innerText = "查看详情";
-        infoBtn.setAttribute("class", "cell-activity-detail");
-        innerView.appendChild(infoBtn);
-    }
-
     return innerView;
 }
 
