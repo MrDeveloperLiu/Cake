@@ -4,6 +4,7 @@ function imageLazyLoader(cls) {
         console.log("lazy-image-load");
         window.addEventListener("scroll", _windowOnScroll);
         window.addEventListener("pageshow", _forcePageReload);
+        window.addEventListener("onbeforeload", _forcePageRefresh);
         _windowOnScroll();
     }
     
@@ -11,14 +12,24 @@ function imageLazyLoader(cls) {
         console.log("lazy-image-unload");
         window.removeEventListener("scroll", _windowOnScroll);
         window.removeEventListener("pageshow", _forcePageReload);
+        window.removeEventListener("onbeforeload", _forcePageRefresh);
     }
 
     function _forcePageReload(event) {
         if (event.persisted) {
-            _resetToUnload();
-            _windowOnScroll();
-            console.log("webpage is loading from a cache");
+            _reloadImages();
+            console.log("imageLazyLoader will load cache");
         }
+    }
+
+    function _forcePageRefresh(event) {
+        _reloadImages();
+        console.log("imageLazyLoader will refresh");
+    }
+
+    function _reloadImages() {
+        _resetToUnload();
+        _windowOnScroll();
     }
 
     function _resetToUnload() {
