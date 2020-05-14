@@ -76,7 +76,7 @@ BDProductInfoDict[10032] = {
     "thumb" : "img/thumb/IMG_1198.JPG",
 };
 BDProductInfoDict[10033] = {
-    "id" : 10032,
+    "id" : 10033,
     "name" : "康乃馨蛋糕（母亲节限定）",
     "unit" : "一个(6寸)",
     "price" : 17800,
@@ -85,6 +85,18 @@ BDProductInfoDict[10033] = {
     "thumb" : "img/thumb/IMG_1221.JPG",
     "tag" : "限定价",
 };
+BDProductInfoDict[10034] = {
+    "id" : 10034,
+    "name" : "皇后（520限定）",
+    "unit" : "一个(6寸)",
+    "price" : 17800,
+    "discount" : 100,
+    "img" : "img/src/IMG_1253.JPG",
+    "thumb" : "img/thumb/IMG_1253.JPG",
+    "tag" : "限定价",
+};
+
+
 ///盒子蛋糕
 BDProductInfoDict[10041] = {
     "id" : 10041,

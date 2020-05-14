@@ -40,8 +40,9 @@ var BDMenuList = [
 var BDNewProductList = {
     "name" : "新品上架",
     "items" : [
+                10034,
                 10045,
-                10051
+                10051,
                ]
 };
 
