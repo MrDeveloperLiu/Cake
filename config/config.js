@@ -8,22 +8,22 @@ var BDMenuList = [
                    10013,
                    10014,
 				   10015
-                   ]
+        ]
     },
     {
         "id" : 1002,
         "name" : "烧仙草系列",
         "items" : [
                     10021
-                   ]
+        ]
     },
     {
         "id" : 1003,
         "name" : "蛋糕系列",
         "items" : [
                    10031,
-                   10032,
-                   ]
+                   10032
+        ]
     },
     {
         "id" : 1004,
@@ -32,18 +32,18 @@ var BDMenuList = [
                    10041,
                    10042,
                    10043,
-                   10044,
-                   ]
+                   10044
+        ]
     }
 ];
 
 var BDNewProductList = {
     "name" : "新品上架",
     "items" : [
-                10034,
-                10045,
-                10051,
-               ]
+               10045,
+               10051,
+               10034,
+    ]
 };
 
 var BDProductLinkList = [
@@ -58,5 +58,5 @@ var BDProductLinkList = [
     {
         "name" : "客户反馈",
         "url" : "product-list.html?type=1",
-    },
+    }
 ]

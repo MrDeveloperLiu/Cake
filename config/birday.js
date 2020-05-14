@@ -14,7 +14,7 @@ var BDBirthdayCakeList = [
     {
         "id" : 4,
         "img" : "img/birthday/IMG_1226.JPG",
-    },
+    }
 ]
 
 var BDCakeCommentList = [
@@ -49,5 +49,5 @@ var BDCakeCommentList = [
     {
         "id" : 8,
         "img" : "img/wx/IMG_1238.JPG",
-    },
+    }
 ]

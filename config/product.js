@@ -46,6 +46,8 @@ BDProductInfoDict[10015] = {
     "img" : "img/src/IMG_100_10015.JPG",
     "thumb" : "img/thumb/IMG_100_10015.JPG",
 };
+
+
 ///烧仙草
 BDProductInfoDict[10021] = {
     "id" : 10021,
@@ -56,6 +58,8 @@ BDProductInfoDict[10021] = {
     "img" : "img/src/IMG_1197.JPG",
     "thumb" : "img/thumb/IMG_1197.JPG",
 };
+
+
 ///蛋糕
 BDProductInfoDict[10031] = {
     "id" : 10031,
@@ -144,6 +148,8 @@ BDProductInfoDict[10045] = {
     "thumb" : "img/thumb/IMG_1244.JPG",
     "tag" : "折扣价",
 };
+
+
 ///冰激凌
 BDProductInfoDict[10051] = {
     "id" : 10051,
