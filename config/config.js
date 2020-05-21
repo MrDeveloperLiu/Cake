@@ -42,7 +42,6 @@ var BDNewProductList = {
     "items" : [
                10045,
                10051,
-               10034,
     ]
 };
 
