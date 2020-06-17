@@ -1,31 +1,23 @@
 //main
 function onLoadComplete() {
-    var lazyLoad = new imageLazyLoader("cls-lazy-img");
+    var lazyLoad = new imageLazyLoader("product");
     lazyLoad.start();
-    //act
-    var actView = document.getElementById("ul-act");
-    buildActivityLists(actView, BDActList);
-    //new
-    var newView = document.getElementById("ul-new");
-    buildNewProductLists(newView, BDNewProductList, turnToDetail);
-    //product
-    var ulView = document.getElementById("ul-list");
-    buildProductLists(ulView, BDMenuList, turnToDetail);
-    //link
-    var linkView = document.getElementById("ul-info");
-    buildProductLinkLists(linkView, BDProductLinkList, turnToProfile);
-    //qr
-    var qrView = document.getElementById("img-qrcode");
-    qrView.src="img/qrcode/IMG_1222.JPG";
-}
-
-function turnToDetail(it) {
-    var toURL = BDURLParser.buildURL("product-detail.html", it);
-    window.location.href = toURL;
-}
-
-function turnToProfile(it) {
-    window.location.href = it;
+    
+    //轮子
+    installWheelView(BDWheelList);
+    //介绍
+    installIntrosView(BDIntroList);
+    //种类
+    installTypesView(BDMenuList);
+    //活动推广
+    installActivityView(BDCoopList);
+    //产品列表
+    installProductView(BDNewProductList);
+    //二维码
+    $("img-qrcode").setImage("img/qrcode/IMG_1222.JPG");
+    //链接
+    installLinksView(BDProductLinkList);
 }
 
 onLoadComplete();
+

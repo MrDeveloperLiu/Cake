@@ -1,6 +1,6 @@
 function URLParser() {
     
-    function build(paramters) {
+    this.build = function (paramters) {
         if (paramters.length <= 0) return "";
         var res = [];
         for (var pairs in paramters) {
@@ -12,7 +12,7 @@ function URLParser() {
         return res.join("&");
     }
     
-    function parse(url) {
+    this.parse = function (url) {
         var url = url.split("?")[1];
         var paramters = url.split("&");
         var res = {};
@@ -25,8 +25,8 @@ function URLParser() {
         return res;
     }
     
-    function buildURL(baseURL, paramters) {
-        var query = build(paramters);
+    this.buildURL = function (baseURL, paramters) {
+        var query = this.build(paramters);
         var idx = baseURL.indexOf("?");
         if (idx == -1) {
             return baseURL + "?" + query;
@@ -37,11 +37,6 @@ function URLParser() {
         return baseURL + "&" + query;
     }
 
-    return {
-        parse : parse,
-        build : build,
-        buildURL : buildURL,
-    }
 }
 
 var BDURLParser = new URLParser();

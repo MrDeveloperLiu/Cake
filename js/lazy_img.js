@@ -36,6 +36,9 @@ function imageLazyLoader(cls) {
         var lazyImgElements = document.getElementsByClassName(lazyLoad_cls);
         for (var i = 0; i < lazyImgElements.length; i++){
             var img = lazyImgElements[i];
+            if (img.nodeName !== "IMG") {
+                continue;
+            }
             img.setAttribute("data-loaded", "0");
         }
     }
@@ -51,6 +54,9 @@ function imageLazyLoader(cls) {
         var lazyImgElements = document.getElementsByClassName(lazyLoad_cls);
         for (var i = 0; i < lazyImgElements.length; i++){
             var img = lazyImgElements[i];
+            if (img.nodeName !== "IMG") {
+                continue;
+            }
             if (img.getAttribute("data-loaded") === "1") {
                 continue;
             }
@@ -78,7 +84,7 @@ function imageLazyLoader(cls) {
             img.setAttribute("data-loaded", "3");
         }
         img.src = src;
-//        console.log("loading", img);
+//        console.log("[SetImage]", img, src);
     }
 
     function _imageIsOnScreen(img) {

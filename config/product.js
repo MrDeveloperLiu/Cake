@@ -81,24 +81,41 @@ BDProductInfoDict[10032] = {
 };
 BDProductInfoDict[10033] = {
     "id" : 10033,
-    "name" : "康乃馨蛋糕（母亲节限定）",
+    "name" : "鲜花蛋糕",
     "unit" : "一个(6寸)",
     "price" : 17800,
     "discount" : 100,
     "img" : "img/src/IMG_1221.JPG",
     "thumb" : "img/thumb/IMG_1221.JPG",
-    "tag" : "限定价",
 };
 BDProductInfoDict[10034] = {
     "id" : 10034,
-    "name" : "皇后（520限定）",
+    "name" : "皇后蛋糕",
     "unit" : "一个(6寸)",
     "price" : 17800,
     "discount" : 100,
     "img" : "img/src/IMG_1253.JPG",
     "thumb" : "img/thumb/IMG_1253.JPG",
-    "tag" : "限定价",
 };
+BDProductInfoDict[10035] = {
+    "id" : 10035,
+    "name" : "巧克力帝国蛋糕",
+    "unit" : "一个(6寸)",
+    "price" : 17800,
+    "discount" : 100,
+    "img" : "img/src/Cake_1.jpg",
+    "thumb" : "img/thumb/Cake_1.jpg",
+};
+BDProductInfoDict[10036] = {
+    "id" : 10036,
+    "name" : "榴莲飘飘千层蛋糕",
+    "unit" : "一个(6寸)",
+    "price" : 17800,
+    "discount" : 100,
+    "img" : "img/src/Cake_2.jpg",
+    "thumb" : "img/thumb/Cake_2.jpg",
+};
+
 
 
 ///盒子蛋糕
@@ -143,10 +160,9 @@ BDProductInfoDict[10045] = {
     "name" : "雪绒冰酪戚风",
     "unit" : "一个(4寸)",
     "price" : 2800,
-    "discount" : 88,
+    "discount" : 100,
     "img" : "img/src/IMG_1244.JPG",
     "thumb" : "img/thumb/IMG_1244.JPG",
-    "tag" : "折扣价",
 };
 
 
@@ -156,9 +172,38 @@ BDProductInfoDict[10051] = {
     "name" : "冰激凌雪媚娘",
     "unit" : "一盒(4个)",
     "price" : 4800,
-    "discount" : 88,
+    "discount" : 100,
     "img" : "img/src/IMG_1243.JPG",
     "thumb" : "img/thumb/IMG_1243.JPG",
-    "tag" : "折扣价",
 };
 
+///吐司
+BDProductInfoDict[10061] = {
+    "id" : 10061,
+    "name" : "100%全麦吐司",
+    "unit" : "一份(750g)",
+    "price" : 3600,
+    "discount" : 100,
+    "img" : "img/src/IMG_1475.JPG",
+    "thumb" : "img/thumb/IMG_1475.JPG",
+};
+
+BDProductInfoDict[10062] = {
+    "id" : 10062,
+    "name" : "综合饱腹黑麦吐司",
+    "unit" : "一份(750g)",
+    "price" : 3600,
+    "discount" : 100,
+    "img" : "img/src/IMG_1473.JPG",
+    "thumb" : "img/thumb/IMG_1473.JPG",
+};
+
+BDProductInfoDict[10063] = {
+    "id" : 10063,
+    "name" : "全麦坚果棒",
+    "unit" : "一份",
+    "price" : 3800,
+    "discount" : 100,
+    "img" : "img/src/IMG_1474.JPG",
+    "thumb" : "img/thumb/IMG_1474.JPG",
+};
