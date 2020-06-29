@@ -52,11 +52,20 @@ BDProductInfoDict[10015] = {
 BDProductInfoDict[10021] = {
     "id" : 10021,
     "name" : "手工芋圆烧仙草",
-    "unit" : "一盒(500ML)",
+    "unit" : "一盒(500ml)",
     "price" : 2800,
     "discount" : 100,
     "img" : "img/src/IMG_1197.JPG",
     "thumb" : "img/thumb/IMG_1197.JPG",
+};
+BDProductInfoDict[10022] = {
+    "id" : 10022,
+    "name" : "杨枝甘露饱饱碗",
+    "unit" : "一盒(500ml)",
+    "price" : 2800,
+    "discount" : 100,
+    "img" : "img/src/IMG_1499.JPG",
+    "thumb" : "img/thumb/IMG_1499.JPG",
 };
 
 
@@ -206,4 +215,25 @@ BDProductInfoDict[10063] = {
     "discount" : 100,
     "img" : "img/src/IMG_1474.JPG",
     "thumb" : "img/thumb/IMG_1474.JPG",
+};
+
+//蛋黄酥
+BDProductInfoDict[10071] = {
+    "id" : 10071,
+    "name" : "蛋黄酥",
+    "unit" : "一份(4个)",
+    "price" : 4800,
+    "discount" : 100,
+    "img" : "img/src/IMG_1498.JPG",
+    "thumb" : "img/thumb/IMG_1498.JPG",
+};
+
+BDProductInfoDict[10072] = {
+    "id" : 10072,
+    "name" : "肉松小贝",
+    "unit" : "一份(4个)",
+    "price" : 2800,
+    "discount" : 100,
+    "img" : "img/src/IMG_1500.JPG",
+    "thumb" : "img/thumb/IMG_1500.JPG",
 };

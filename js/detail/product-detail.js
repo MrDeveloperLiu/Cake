@@ -9,7 +9,7 @@ function onLoadComplete() {
     title.innerText = json.name;
 
     //image
-    var imageView = document.getElementById("icon");
+    var imageView = $("icon");
     imageView.height = 300;
     
     ut_loadImageFitScreen(json.img, 0, function(image, w, h){
@@ -18,11 +18,11 @@ function onLoadComplete() {
         imageView.height = h;
     });
     //title
-    var titleView = document.getElementById("title");
-    titleView.innerText = json.name;
+    $("title").innerText = json.name;
     //price
-    var priceView = document.getElementById("price");
-    priceView.innerHTML = ut_formatPriceWithDiscount(json.price, json.discount);
+    $("price").innerHTML = ut_formatPriceWithDiscount(json.price, json.discount);
+    //unit
+    $("unit").innerText = json.unit;
 }
 
 onLoadComplete();

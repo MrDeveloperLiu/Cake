@@ -1,4 +1,20 @@
-var BDIntroList = [];
+var BDIntroList = [
+    {
+        "id" : 1,
+        "title" : "新鲜无添加",
+        "icon" : "img/icon/ic-add.jpg",
+    },
+    {
+        "id" : 2,
+        "title" : "100%动物奶油",
+        "icon" : "img/icon/ic-cow.jpg",
+    },
+    {
+        "id" : 3,
+        "title" : "低脂低糖",
+        "icon" : "img/icon/ic-fat.jpg",
+    },
+];
 
 var BDMenuList = [
     {
@@ -43,7 +59,10 @@ var BDMenuIdMap = {
             10014,
             10015,
             10021,
-            10051
+            10051,
+            10022,
+            10071,
+            10072
     ],
     1003 : [
             10061,
